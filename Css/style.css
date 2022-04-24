@@ -1,0 +1,56 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.clock {
+  background-image: url("https://lh4.googleusercontent.com/N-3NMJgQIgTZSsnnhZGbcwVewrbaHKpwK9k7EawNJYbfYjEoLxJdESAeFtzmm6NPEAj_kQbkCNxm-SQ=w1366-h657");
+  height: 600px;
+  width: 600px;
+  background-size: 600px 600px;
+  position: relative;
+}
+
+.seconds,
+.minutes,
+.hours {
+  position: absolute;
+  left: calc(50% - 1px);
+  transform-origin: bottom center;
+  top: 5px;
+}
+
+.seconds {
+  height: 15em;
+  margin-top: 50px;
+  animation: rotate 60s infinite linear;
+  background-color: red;
+  width: 3px;
+  border-radius: 50px;
+}
+.minutes {
+  height: 15em;
+  margin-top: 50px;
+  opacity: 0.75;
+  width: 6px;
+  transform: rotateZ(220deg);
+  animation: rotate 3600s infinite linear;
+  animation-delay: -35s;
+  background-color: black;
+}
+.hours {
+  height: 15em;
+  margin-top: 50px;
+  transform: rotateZ(280deg);
+  width: 9px;
+  border-radius: 30px;
+  background-color: black;
+  animation: rotate 43200s infinite linear;
+  animation-delay: -20s;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
